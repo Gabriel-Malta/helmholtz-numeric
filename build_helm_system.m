@@ -1,4 +1,4 @@
-function A = build_helm_system (m_x, m_y, A_matrix, F_matrix, upper_bound, bottom_bound)                   % AU = F
+function [A,F] = build_helm_system (m_x, m_y, A_matrix, F_matrix, upper_bound, bottom_bound)                   % AU = F
     % Dado que a parte inferior e superior do quadrado são condições de Dirichilet
     count_variables = m_x*(m_y - 2);
     
@@ -55,4 +55,5 @@ function A = build_helm_system (m_x, m_y, A_matrix, F_matrix, upper_bound, botto
         end
     end
     A = A_matrix;
+    F = F_matrix;
 endfunction
